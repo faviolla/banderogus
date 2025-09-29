@@ -1,18 +1,28 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  min-width: 320px;
 }
 
 .main-page {
   width: 100%;
   background: linear-gradient(270deg, #a5deff 0%, #fcfefe 100%);
+  overflow: hidden;
 }
 
 .main-page-text-container {
   background: #fff;
-  border-radius: 40px;
-  padding: 60px;
   box-sizing: border-box;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 0 0 40px;
+}
+
+@media (min-width: 768px) {
+  .main-page-text-container {
+    border-radius: 40px;
+    padding: 60px;
+  }
 }
 
 .wrapper {
@@ -20,8 +30,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1170px;
+  max-width: 1170px;
   position: relative;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+
+.img-gus {
+  margin-right: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-page .wrapper {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 1024px) {
+  .main-page .wrapper {
+    flex-direction: row;
+  }
 }
 
 .main-page-hello-text {
@@ -29,15 +65,27 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: #1b1d1f;
-  margin: 0 0 60px;
+  margin: 0 0 30px;
+}
+
+@media (min-width: 768px) {
+  .main-page-hello-text {
+    margin: 0 0 60px;
+  }
 }
 
 .main-page-title {
   font-weight: 600;
-  font-size: 64px;
+  font-size: 32px;
   line-height: 112%;
   color: #1b1d1f;
   margin: 0 0 24px;
+}
+
+@media (min-width: 768px) {
+  .main-page-title {
+    font-size: 64px;
+  }
 }
 
 .main-page-description {
@@ -64,12 +112,48 @@ body {
 .goit-logo {
   position: absolute;
   top: 32px;
-  left: 0;
+  right: 15px;
+}
+
+@media (min-width: 768px) {
+  .goit-logo {
+    top: 32px;
+    left: 30px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .goit-logo {
+    top: 32px;
+    left: 0;
+  }
 }
 
 .facts {
-  padding: 48px 0 100px;
+  padding: 48px 15px 100px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .facts {
+    padding: 48px 30px 100px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .facts {
+    padding: 48px 0 100px;
+  }
+}
+
+.facts .wrapper {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .facts .wrapper {
+    flex-direction: row;
+  }
 }
 
 .facts-tryzub {
@@ -79,9 +163,17 @@ body {
 .facts-title {
   margin: 0 0 32px;
   font-weight: 600;
-  font-size: 48px;
-  line-height: 150%;
+  font-size: 24px;
+  line-height: 120%;
   color: #1b1d1f;
+}
+
+@media (min-width: 768px) {
+  .facts-title {
+    margin: 0 0 32px;
+    font-size: 48px;
+    line-height: 150%;
+  }
 }
 
 .facts-description {
@@ -90,21 +182,32 @@ body {
   line-height: 150%;
   text-align: center;
   color: #1b1d1f;
-  width: 772px;
+  max-width: 772px;
   margin: 0 auto 24px;
 }
 
 .facts-item {
-  width: calc(100% / 3 - 24px * 2 / 3);
+}
+
+@media (min-width: 768px) {
+  .facts-item {
+    width: calc(100% / 3 - 24px * 2 / 3);
+  }
 }
 
 .facts-item-title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 100%;
   text-align: center;
   color: #1b1d1f;
   margin: 0 0 32px;
+}
+
+@media (min-width: 768px) {
+  .facts-item-title {
+    font-size: 24px;
+  }
 }
 
 .facts-item-description {
@@ -119,7 +222,7 @@ body {
 .form-container {
   width: 100%;
   background: linear-gradient(270deg, #a5deff 0%, #fcfefe 100%);
-  padding: 80px 0;
+  padding: 80px 15px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -127,10 +230,23 @@ body {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .form-container {
+    padding: 80px 0;
+  }
+}
+
 .form {
   background: #fff;
-  border-radius: 40px;
-  padding: 32px 60px 60px;
+  border-radius: 20px;
+  padding: 24px 30px 30px;
+}
+
+@media (min-width: 768px) {
+  .form {
+    border-radius: 40px;
+    padding: 32px 60px 60px;
+  }
 }
 
 .form-tryzub {
@@ -140,9 +256,15 @@ body {
 .form-title {
   margin: 0 0 12px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 100%;
   color: #1b1d1f;
+}
+
+@media (min-width: 768px) {
+  .form-title {
+    font-size: 24px;
+  }
 }
 
 .form-description {
