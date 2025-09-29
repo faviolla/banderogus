@@ -41,17 +41,16 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(form);
 
-  if (userEmailField?.value?.length > 30) {
-    return;
-  }
-
-  console.log("Імʼя користувача: ", userEmailField.value);
-  console.log("Email користувача: ", userNameField.value);
+  console.log("Імʼя користувача: ", userNameField.value);
+  console.log("Email користувача: ", userEmailField.value);
 
   launchBtn.setAttribute("disabled", true);
   launchBtn.style.opacity = "0.7";
 
   showGooseAnim();
+
+  launchBtn.removeAttribute("disabled");
+  clearFormFields();
 
   setTimeout(() => {
     launchBtn.style.opacity = "1";
